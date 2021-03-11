@@ -1,0 +1,8 @@
+.vscode
+*.sqlite3
+__pycache__/
+.env
+uploads/
+*.png
+*.zip
+media/
