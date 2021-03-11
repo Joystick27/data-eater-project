@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+	font-family: 'OpenSans';
+	src: url(/assets/fonts/Open_Sans/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url(/assets/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Roboto';
+	src: url(/assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Pacifico';
+	src: url(/assets/fonts/Pacifico/Pacifico-Regular.ttf) format("truetype");
+}
+
+a {
+	cursor: pointer;
+}
+
+* {
+	font-family: Montserrat;
+}

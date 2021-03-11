@@ -1,0 +1,13 @@
+{
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.fontSize": 22,
+	"editor.formatOnSave": true,
+	"terminal.integrated.shellArgs.windows": [
+		"-ExecutionPolicy",
+		"Bypass"
+	],
+	"editor.wordWrap": "on",
+	"html.format.wrapAttributes": "force-aligned",
+}

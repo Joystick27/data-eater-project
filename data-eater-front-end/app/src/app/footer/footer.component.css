@@ -1,0 +1,56 @@
+.container-fluid {
+	background-color: #6f7377;
+	color: whitesmoke;
+}
+
+.powered {
+	font-family: Pacifico;
+}
+
+.footer-title {
+	margin: 0px;
+	padding: 0px;
+	font-family: Roboto;
+	font-weight: bold;
+	display: block;
+}
+
+hr {
+	background-color: rgb(85, 84, 84);
+	margin-bottom: 5px;
+	width: 95%;
+}
+
+.footer {
+	min-height: 150px;
+}
+
+.links {
+	display:inline-block;
+	width: 100%;
+	color: rgb(189, 188, 188);
+}
+
+.footer-contact {
+	margin: 0px;
+	padding: 0px;
+	font-family: Roboto;
+	font-weight: bold;
+	display: block;
+	color: rgb(189, 188, 188);
+}
+
+
+.copyright {
+	background-color: #5b5c5e;
+	font-size: large;
+	padding: 5px;
+}
+@media only screen and (max-width: 767px) {
+	.footer-title {
+		margin-top: 20px;
+	}
+	.footer-contact {
+		margin-top: 20px;
+	}
+}

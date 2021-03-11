@@ -1,0 +1,63 @@
+h2 {
+	margin-top: 10px;
+	font-family: OpenSans;
+	font-weight: bold;
+	color: rgb(54, 52, 52);
+}
+
+.rounded {
+	width: 500px;
+}
+
+.col-6 {
+	padding: 0px !important;
+}
+
+.container {
+	width: 90%;
+}
+
+button {
+	width: 100px;
+	max-height: 40px;
+}
+
+hr {
+	width: 90%;
+}
+
+.mt {
+	margin-top: 50px;
+}
+
+.r-col-height-login {
+	height: 300px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  	border: 1px solid red;
+}
+
+img {
+	width: 100%;
+}
+
+.tl {
+	text-align: left;
+}
+
+.tr {
+	text-align: right;
+}
+
+
+.forgot-pass {
+	font-weight: lighter;
+	color: rgb(56, 55, 55);
+	margin-bottom: 5px;
+}
+
+@media all and (max-width: 576px) {
+
+}

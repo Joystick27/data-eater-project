@@ -1,0 +1,24 @@
+<div class="row justify-content-center"
+	 *ngIf="isLoading">
+	<div class="spinner-border text-primary"
+		 role="status">
+		<span class="sr-only">Loading...</span>
+	</div>
+</div>
+<div class="row justify-content-center"
+	 *ngIf="!isLoading">
+	<p>An email has been sent to your account.
+		Please click on the link to activate your account.</p>
+</div>
+<div class="row justify-content-center"
+	 *ngIf="!isLoading">
+	<i class="text-info">{{message}}</i>
+</div>
+<div class="row justify-content-center"
+	 *ngIf="!isLoading">
+	<button class="btn btn-primary"
+			(click)="reSendActivation()"
+			[disabled]="isLoading">
+		Resend Email
+	</button>
+</div>

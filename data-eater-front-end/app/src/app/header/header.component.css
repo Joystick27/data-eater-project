@@ -1,0 +1,40 @@
+.navbar-collapse a.active {
+	border-bottom: 3px solid blue;
+}
+
+.navbar-brand {
+	font-family: Pacifico;
+	font-weight: bold;
+	color: rgb(61, 61, 61);
+}
+
+.navbar {
+	width: 100%;
+	z-index: 9;
+	background-color: transparent !important;
+}
+.hov:hover {
+	background-color: #d1d1d1 !important;
+	color: black !important;
+	border-radius: 5px;
+}
+
+li {
+	margin-left: 20px;
+}
+
+.rounded-circle {
+	width: 30px;
+	height: 30px;
+}
+
+.rounded-circle:hover {
+	border: 1px;
+	border-style: ridge;
+}
+
+.navbar {
+	transition: all 0.5s ease;
+	padding-left: 30px !important;
+}
+

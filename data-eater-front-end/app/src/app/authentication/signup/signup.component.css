@@ -1,0 +1,63 @@
+h2 {
+	margin-top: 10px;
+	font-family: OpenSans;
+	font-weight: bold;
+	color: rgb(54, 52, 52);
+}
+
+.container {
+	width: 90%;
+}
+
+hr {
+	width: 90%;
+}
+
+.mt {
+	margin-top: 50px;
+}
+
+.col-sm-6 {
+	flex-grow: 1;
+	flex-shrink: 1;
+  	transition: all 400ms ease;
+}
+
+.extra-padding {
+	padding: 0px 15px 0px 15px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  	border: 1px solid red;
+}
+
+.error-message {
+	line-height: 14px;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+button {
+	width: 100px;
+	max-height: 40px;
+}
+
+.tl {
+	text-align: left;
+}
+
+.tr {
+	text-align: right;
+}
+
+small {
+	width: 100%;
+}
+
+@media all and (max-width: 575px) {
+	.mr-b {
+		margin-bottom: 15px;
+	}
+}

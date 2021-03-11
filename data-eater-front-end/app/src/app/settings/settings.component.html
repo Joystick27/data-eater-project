@@ -1,0 +1,99 @@
+<div class="row"
+	 style="margin-bottom: 200px;">
+	<div class="col-md-12 d-flex justify-content-center mt">
+		<div class="border border-light rounded shadow-lg p-2 mb-5">
+			<h2 class="text-center">Settings</h2>
+			<hr>
+			<div style="margin: 50px;"
+				 *ngIf="isChangePassMode">
+				<table class="table table-borderless">
+					<tbody>
+						<tr>
+							<td>Email:</td>
+							<td>{{response.email}}</td>
+						</tr>
+						<tr>
+							<td>First Name:</td>
+							<td>{{response.first_name}}</td>
+						</tr>
+						<tr>
+							<td>Last Name:</td>
+							<td>{{response.last_name}}</td>
+						</tr>
+						<tr>
+							<td>Phone:</td>
+							<td>{{response.phone}}</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><button class="btn btn-outline-danger"
+										(click)="changePassMode()">Change Password</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div style="margin: 50px;"
+				 *ngIf="!isChangePassMode">
+				<form [formGroup]="changePasswordForm"
+					  (ngSubmit)="onSubmit()">
+					<table class="table table-borderless">
+						<tbody>
+							<tr>
+								<td>Old Password:</td>
+								<td><input type="password"
+										   id="password"
+										   class="form-control"
+										   formControlName="oldPassword"
+										   placeholder="Password">
+								</td>
+							</tr>
+							<tr>
+								<td>New Password:</td>
+								<td><input type="password"
+										   id="password"
+										   class="form-control"
+										   formControlName="newPassword"
+										   placeholder="New Password"
+										   #newPassword></td>
+							</tr>
+							<tr>
+								<td>Confirm Password:</td>
+								<td><input type="password"
+										   id="password"
+										   class="form-control"
+										   formControlName="confPassword"
+										   placeholder="Confirm Password"
+										   #confPassword>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"
+									style="text-align: center;">
+									<p>
+										<small class="text-danger text-center"
+											   *ngIf="changePasswordForm.controls.confPassword.touched && newPassword.value != confPassword.value">
+											passwords do not match
+										</small>
+										<br>
+										<small class="text-info text-center"
+											   *ngIf="changePasswordForm.controls.newPassword.touched && changePasswordForm.controls.newPassword.invalid">
+											*Password must contain Uppercase,<br>
+											Lowercase and a character [@#$%&*].
+										</small>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td><button class="btn btn-outline-primary"
+											(click)="changePassMode()">Go Back</button></td>
+								<td><button type="submit"
+											[disabled]="!changePasswordForm.valid"
+											class="btn btn-outline-danger">Change Password</button></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

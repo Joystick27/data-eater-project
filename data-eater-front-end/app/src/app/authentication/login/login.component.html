@@ -1,0 +1,71 @@
+<div class="row">
+	<div class="col-md-12 d-flex justify-content-center mt">
+		<div class="border border-light rounded shadow-lg p-2 mb-5">
+			<h2 class="text-center">
+				Login
+			</h2>
+			<hr>
+			<form [formGroup]="loginForm"
+				  (ngSubmit)="onSubmit()">
+				<div class="container">
+					<div class="row justify-content-center mt-3">
+						<input type="email"
+							   id="email"
+							   class="form-control"
+							   formControlName="email"
+							   placeholder="Email">
+						<small class="text-danger text-center"
+							   *ngIf="loginForm.controls.email.touched && !loginForm.controls.email.valid">
+							It must contain a valid email.
+						</small>
+					</div>
+					<div class="row justify-content-center mt-3">
+						<input type="password"
+							   id="password"
+							   class="form-control"
+							   formControlName="password"
+							   placeholder="Password">
+						<small class="text-danger text-center"
+							   *ngIf="loginForm.controls.password.touched && 
+							   !loginForm.controls.password.valid">
+							*Password must contain a Uppercase,<br>
+							Lowercase, Number, Character <br>
+							and must be atleast 8 characters long.<br>
+							Allowed characters: [@#$%&*]
+						</small>
+						<small class="text-danger text-center"
+							   *ngIf="loginFailed">
+							{{errorMessage}}
+						</small>
+					</div>
+
+					<div class="row mt-3">
+						<div class="col-6 tl">
+							<button type="button"
+									class="btn btn-primary"
+									[disabled]="isLoading"
+									routerLink="/auth/signup">
+								Sign Up
+							</button>
+						</div>
+						<div class="col-6 tr">
+							<button type="submit"
+									class="btn btn-primary"
+									[disabled]="!loginForm.valid || isLoading">
+								<div *ngIf="!isLoading">Log in</div>
+								<div class="spinner-border spinner-border-sm text-light"
+									 role="status"
+									 *ngIf="isLoading">
+									<span class="sr-only">Loading...</span>
+								</div>
+							</button>
+						</div>
+					</div>
+					<div class="row justify-content-center forgot-pass">
+						<a>Forgot password?</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

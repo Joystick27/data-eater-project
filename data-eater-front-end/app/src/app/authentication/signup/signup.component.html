@@ -1,0 +1,92 @@
+<div class="row">
+	<div class="col-md-12 d-flex justify-content-center mt">
+		<div class="border border-light rounded shadow-lg p-2 mb-5">
+			<h2 class="text-center">
+				Register
+			</h2>
+			<hr>
+			<form [formGroup]="signUpForm"
+				  (ngSubmit)="onSubmit()">
+				<div class="container">
+
+					<div class="row justify-content-center mt-3 extra-padding">
+						<input type="email"
+							   id="email"
+							   class="form-control"
+							   formControlName="email"
+							   placeholder="Email">
+						<small class="text-danger text-center"
+							   *ngIf="signUpForm.controls.email.touched && !signUpForm.controls.email.valid">
+							It must contain a valid email.
+						</small>
+					</div>
+
+					<div class="row justify-content-center mt-3">
+						<div class="col-sm-6  mr-b">
+							<input type="password"
+								   id="password"
+								   class="form-control"
+								   formControlName="password"
+								   placeholder="Password"
+								   #password>
+						</div>
+
+						<div class="col-sm-6">
+							<input type="password"
+								   id="confPassword"
+								   class="form-control"
+								   formControlName="confPassword"
+								   placeholder="Confirm Password"
+								   #confPassword>
+						</div>
+					</div>
+
+					<div class="row text-center error-message">
+						<small class="text-danger"
+							   *ngIf="signUpForm.controls.confPassword.touched && password.value != confPassword.value">
+							passwords do not match
+						</small>
+						<br>
+						<small class="text-danger text-center"
+							   *ngIf="signUpForm.controls.password.touched && signUpForm.controls.password.invalid">
+							*Password must contain a Uppercase,<br>
+							Lowercase, Number, Character <br>
+							and must be atleast 8 characters long.<br>
+							Allowed characters: [@#$%&*]
+						</small>
+					</div>
+					<div class="row justify-content-center">
+						<small class="text-danger text-center"
+							   *ngIf="accontCreationFailed">
+							{{errorMessage}}
+						</small>
+
+					</div>
+
+					<div class="row mt-3 mb-3">
+						<div class="col-6 tl">
+							<button type="button"
+									class="btn btn-primary"
+									[disabled]="isLoading"
+									routerLink="/auth">
+								Sign In
+							</button>
+						</div>
+						<div class="col-6 tr">
+							<button type="submit"
+									class="btn btn-primary"
+									[disabled]="!signUpForm.valid || isLoading">
+								<div *ngIf="!isLoading">Register</div>
+								<div class="spinner-border spinner-border-sm text-light"
+									 role="status"
+									 *ngIf="isLoading">
+									<span class="sr-only">Loading...</span>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
